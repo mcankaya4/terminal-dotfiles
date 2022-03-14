@@ -5,7 +5,7 @@
 https://github.com/challenger-deep-theme/vim
 
 - vim plug install
-- source code pro 16px font
+- source code pro 17px font
 - blur %25
 - bg_transparent %30
 
