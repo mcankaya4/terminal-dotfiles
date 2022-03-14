@@ -1,5 +1,5 @@
 # terminal-dotfiles
-- vim, tmux, iterm2, zsh, ohmyzsh install
+- vim, tmux, iterm2, zsh, ohmyzsh, yarn install
 
 - tmux, iterm2, vim theme için 
 https://github.com/challenger-deep-theme/vim
