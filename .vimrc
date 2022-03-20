@@ -26,7 +26,10 @@ call plug#begin()
 	Plug 'sheerun/vim-polyglot'
 call plug#end()
 
-"autocmd VimEnter * NERDTree
+" autocmd VimEnter * NERDTree
+let NERDTreeMapOpenInTab='<ENTER>'
+let NERDTreeShowHidden=1
+
 
 let g:prettier#quickfix_enabled = 0
 autocmd BufWritePre *.js,*.css,*.scss,*.json,*.md,*.vue,*.php,*.html,*.ts PrettierAsync
@@ -56,10 +59,14 @@ if (empty($TMUX))
   endif
 endif
 
+highlight LineNr ctermfg=7 ctermbg=27
+highlight CursorLine ctermbg=232
+
 nnoremap nc  :NERDTreeClose<CR>
 nnoremap nt  :NERDTreeToggle<CR>
 nnoremap nf  :NERDTreeFocus<CR>
 nnoremap no  :NERDTree<CR>
+nnoremap ee  :Explore<CR>
 
 nnoremap <leader>1 1gt
 nnoremap <leader>2 2gt
@@ -78,3 +85,9 @@ nnoremap vsp :vsplit<Space>
 nnoremap sp  :split<Space>
 
 nnoremap ff :Files<cr>
+let g:fzf_buffers_jump = 1
+let g:fzf_action = {
+\ 'enter': 'tab split',
+\ 'ctrl-s': 'split',
+\ 'ctrl-v': 'vsplit' }
+
